@@ -416,7 +416,7 @@ public class GeoFilterTests extends ElasticsearchIntegrationTest {
         BulkResponse bulk = client().prepareBulk().add(bulkAction, 0, bulkAction.length, false, null, null).execute().actionGet();
 
         for (BulkItemResponse item : bulk.getItems()) {
-            assert !item.isFailed() : "unable to index data";
+            assertFalse("unable to index data", item.isFailed());
         }
 
         client().admin().indices().prepareRefresh().execute().actionGet();
