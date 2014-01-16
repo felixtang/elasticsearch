@@ -137,7 +137,7 @@ public class SimpleJodaTests extends ElasticsearchTestCase {
 
         try {
             millis = formatter.parser().parseMillis("1970/01/01");
-            assert false;
+            fail();
         } catch (IllegalArgumentException e) {
             // it really can't parse this one
         }

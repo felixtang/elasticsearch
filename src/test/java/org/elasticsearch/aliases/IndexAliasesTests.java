@@ -111,7 +111,7 @@ public class IndexAliasesTests extends ElasticsearchIntegrationTest {
         try {
             logger.info("--> aliasing index [test] with [alias1] and filter [t]");
             admin().indices().prepareAliases().addAlias("test", "alias1", "{ t }").execute().actionGet();
-            assert false;
+            fail();
         } catch (Exception e) {
             // all is well
         }

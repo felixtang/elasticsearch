@@ -124,12 +124,12 @@ public class SlicedObjectListTests extends ElasticsearchTestCase {
         TestList list = new TestList(5);
         try {
             list.set(0, (double)4);
-            assert false;
+            fail();
         } catch (UnsupportedOperationException ex) {
         }
         try {
             list.add((double)4);
-            assert false;
+            fail();
         } catch (UnsupportedOperationException ex) {
         }
     }

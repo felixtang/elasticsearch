@@ -703,7 +703,7 @@ public abstract class AbstractSimpleTransportTests extends ElasticsearchTestCase
             @Override
             public void handleException(TransportException exp) {
                 exp.printStackTrace();
-                assert false;
+                fail();
             }
 
             @Override
@@ -755,7 +755,7 @@ public abstract class AbstractSimpleTransportTests extends ElasticsearchTestCase
             @Override
             public void handleException(TransportException exp) {
                 exp.printStackTrace();
-                assert false;
+                fail();
             }
 
             @Override
@@ -810,7 +810,7 @@ public abstract class AbstractSimpleTransportTests extends ElasticsearchTestCase
             @Override
             public void handleException(TransportException exp) {
                 exp.printStackTrace();
-                assert false;
+                fail();
             }
 
             @Override
@@ -861,7 +861,7 @@ public abstract class AbstractSimpleTransportTests extends ElasticsearchTestCase
             @Override
             public void handleException(TransportException exp) {
                 exp.printStackTrace();
-                assert false;
+                fail();
             }
 
             @Override
