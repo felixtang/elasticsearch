@@ -30,9 +30,7 @@ import org.junit.Test;
 
 import java.util.Date;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.fail;
 
 /**
  *
@@ -93,7 +91,7 @@ public class SimpleJodaTests extends ElasticsearchTestCase {
 
         try {
             formatter.parseMillis("1970 kuku");
-            assert false : "formatting should fail";
+            fail("formatting should fail");
         } catch (IllegalArgumentException e) {
             // all is well
         }
